@@ -16,7 +16,7 @@ class Main2Activity : AppCompatActivity() {
 
         val menuRestaurante: ArrayList<String> = arrayListOf("Cangreburger", "Monsteburguer", "Salchiburguer", "Pizza")
 
-        val listViewRM = findViewById<ListView>(R.id.LV_Menu)
+        val listViewRM = findViewById<ListView>(R.id.LV_Pedido)
         val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, menuRestaurante)
         listViewRM.setAdapter(adapter)
         listViewRM.setOnItemClickListener { parent, view, position, id ->
