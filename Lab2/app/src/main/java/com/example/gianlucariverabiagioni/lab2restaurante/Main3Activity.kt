@@ -34,8 +34,11 @@ class Main3Activity : AppCompatActivity() {
         val btnLimpiar = findViewById<Button>(R.id.btnLimpiar)
         btnLimpiar.setOnClickListener{
             order.clear()
+            //Este es el codigo que realmente limpia la listview
+            adapter.notifyDataSetChanged()
         }
 
+        //Muestra mensje cuando realiza el pedido
         val btnHacerPedido = findViewById<Button>(R.id.btnHacerPedido)
         btnHacerPedido.setOnClickListener{
             order.done()

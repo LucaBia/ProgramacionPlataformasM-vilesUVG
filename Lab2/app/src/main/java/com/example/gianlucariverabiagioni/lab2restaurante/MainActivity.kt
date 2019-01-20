@@ -12,12 +12,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //Codigo para que al presionar el boton vaya al menu del restaurante
         val boton = findViewById<Button>(R.id.btnMostrarMenu)
         boton.setOnClickListener{val intent = Intent(this,Main2Activity::class.java)
             startActivity(intent)}
 
-        val btnMostrarMenu = findViewById<Button>(R.id.btnMostrarPedido)
-        btnHacerPedido.setOnClickListener{ val intent2 = Intent(this, Main3Activity::class.java)
+        //Codigo necesario para que al presionar el segundo boton, se dirija a la activity 3 en donde se encuentra la activity de el pedido realizado
+        val btnMostrarPedido = findViewById<Button>(R.id.btnMostrarPedido)
+        btnMostrarPedido.setOnClickListener{ val intent2 = Intent(this, Main3Activity::class.java)
             startActivity(intent2)
         }
     }
