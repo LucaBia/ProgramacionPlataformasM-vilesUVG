@@ -25,12 +25,21 @@ class Main3Activity : AppCompatActivity() {
         val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, order.menuOrder)
         ListView.setAdapter(adapter)
 
-        val btnInicio = findViewById<Button>(R.id.btnInicio)
+        val btnInicio = findViewById<Button>(R.id.btnI)
         btnInicio.setOnClickListener{
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
 
-        
+        val btnLimpiar = findViewById<Button>(R.id.btnLimpiar)
+        btnLimpiar.setOnClickListener{
+            order.clear()
+        }
+
+        val btnHacerPedido = findViewById<Button>(R.id.btnHacerPedido)
+        btnHacerPedido.setOnClickListener{
+            order.done()
+            Toast.makeText(this, "Se ha realizado su orden con exito", Toast.LENGTH_SHORT).show()
+        }
     }
 }

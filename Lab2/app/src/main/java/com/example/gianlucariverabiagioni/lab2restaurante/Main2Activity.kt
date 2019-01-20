@@ -25,7 +25,7 @@ class Main2Activity : AppCompatActivity() {
             Toast.makeText(this, "Se agrego: ${parent.getItemAtPosition(position)}" , Toast.LENGTH_SHORT).show()
         }
 
-        val btnInicio = findViewById<Button>(R.id.btnInicio)
+        val btnInicio = findViewById<Button>(R.id.btnI)
         btnInicio.setOnClickListener{
             val intent = Intent(this,MainActivity::class.java)
             startActivity(intent)
