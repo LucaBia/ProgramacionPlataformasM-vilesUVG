@@ -2,5 +2,9 @@
     <string name="app_name">Lab3Contactos</string>
     <string name="button">Agregar Contaco</string>
     <string name="mis_contactos">Mis Contactos</string>
+    <string name="crear">Crear</string>
+    <string name="regresar">Regresar</string>
+    <string name="telefono">Telefono</string>
+    <string name="correo_electronico">Correo Electronico</string>
 
 </resources>
