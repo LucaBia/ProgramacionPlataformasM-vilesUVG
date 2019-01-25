@@ -16,7 +16,7 @@ class MyApplication: Application() {
     fun setSelectedUser(number: Int){
         this.index = number
     }
-    
+
     fun getSelectedUser(): Int {
         return index
     }
