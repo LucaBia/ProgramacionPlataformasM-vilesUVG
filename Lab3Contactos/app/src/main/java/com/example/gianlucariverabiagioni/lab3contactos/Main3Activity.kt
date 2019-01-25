@@ -5,6 +5,7 @@ import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.ContactsContract
+import android.widget.Button
 import android.widget.TextView
 
 class Main3Activity : AppCompatActivity() {
@@ -16,6 +17,10 @@ class Main3Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main3)
+
+        val boton = findViewById<Button>(R.id.button)
+        boton.setOnClickListener{val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)}
 
         val app: MyApplication = applicationContext as MyApplication
 
