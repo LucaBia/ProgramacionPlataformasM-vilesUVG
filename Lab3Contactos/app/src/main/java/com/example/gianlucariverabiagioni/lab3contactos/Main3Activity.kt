@@ -31,10 +31,24 @@ class Main3Activity : AppCompatActivity() {
         tvCellphone.setText(cellphone)
         tvEmail.setText(email)
 
+
+        //Intent para acceder al teclado del telefono y llamar
         tvCellphone.setOnClickListener{
             val intent = Intent(Intent.ACTION_DIAL)
             intent.data = Uri.parse("tel:"+cellphone)
             startActivity(intent)
+        }
+
+        //Broadcast email
+        tvEmail.setOnClickListener{
+            val intent = Intent(Intent.ACTION_SENDTO)
+            intent.type = "text/html"
+            intent.data=Uri.parse("mailto:"+email)
+            intent.putExtra(Intent.EXTRA_EMAIL,email)
+
+            startActivity(Intent.createChooser(intent, "Send Email"))
+            intent.setAction("CUSTOM_INTENT");
+            sendBroadcast(intent)
         }
     }
 }
